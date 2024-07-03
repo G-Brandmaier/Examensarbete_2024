@@ -1,0 +1,60 @@
+/* Inputs */
+.input-container {
+    @apply relative m-auto w-[440px] lg:w-[600px];
+  }
+  
+  .input-container input{
+    @apply py-2 px-3 border-0 text-black w-full box-border tracking-widest outline-none text-textMd;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .input-container input[type="text"]:focus + .focus-border {
+    @apply w-full left-0;
+    transition: 0.4s;
+  }
+  
+  .focus-border {
+    @apply absolute bottom-0 left-1/2 w-0 h-0.5;
+    background-color: #ec6001;
+    transition: 0.4s;
+  }
+  
+  .icon-container {
+    @apply absolute top-1/2 right-2;
+    transform: translateY(-50%);
+  }
+  
+  .icon {
+    @apply text-xl cursor-pointer;
+    color: #999;
+  }
+
+.search-container{
+    @apply w-[440px] h-auto justify-self-center absolute top-16 left-0 right-0 z-50 bg-overLayDarker text-white max-h-[650px] overflow-auto p-2 lg:w-[608px];
+}
+
+.menu .search-container{
+  @apply w-[260px] h-auto justify-self-center absolute top-44 left-0 right-0 z-50 bg-overLayDarker text-white max-h-[650px] overflow-auto p-2;
+}
+
+/* Menu */
+
+.menu-overlay{
+  @apply w-full h-screen bg-overLayDarker z-20 absolute top-0 left-0 right-0 md:left-auto md:w-1/3 lg:w-1/4 xl:w-1/6;
+}
+
+.menu{
+  @apply flex flex-col gap-4 mx-auto w-[260px] pt-20 md:pt-6 md:w-full md:px-6 md:gap-6;
+}
+
+.menu .input-container{
+  @apply relative mx-auto w-[260px] md:hidden;
+}
+
+.menu a{
+  @apply text-primaryOrange;
+}
+
+.menu a:hover{
+  @apply text-primaryOrange opacity-20;
+}

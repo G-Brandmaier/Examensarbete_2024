@@ -1,0 +1,16 @@
+.tabs-container{
+    @apply flex flex-row gap-8 justify-center;
+}
+
+.tab{
+    @apply text-headingMd md:text-headingLg text-primaryOrange;
+}
+
+.tab:hover{
+    @apply opacity-15 cursor-pointer;
+}
+
+.selected-tab{
+    @apply border-primaryOrange font-bold;
+    border-bottom: 4px solid;
+}

@@ -1,0 +1,24 @@
+.form-input{
+    @apply h-10 rounded text-white bg-secondaryGrey p-2;
+}
+
+.form-input-container{
+    @apply flex flex-col;
+}
+
+.form-btn{
+    @apply bg-primaryOrange p-2 rounded max-w-28 mt-4 cursor-pointer;
+}
+
+
+.form-error{
+    @apply text-error p-1 text-textSm text-right z-10 h-2;
+}
+
+.form-success{
+    @apply text-success p-1 text-textSm text-right z-10 h-2;
+}
+
+.hide-password-icon{
+  @apply absolute text-primaryLightGrey right-2 bottom-5;
+}

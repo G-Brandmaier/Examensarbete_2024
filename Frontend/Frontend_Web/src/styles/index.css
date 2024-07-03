@@ -1,0 +1,107 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Monoton&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Default css */
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  @apply m-0 min-w-[320px] min-h-[100vh] font-primaryFont bg-primaryBlack text-white;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  @apply pb-72
+}
+
+#footer {
+  @apply absolute bottom-0 w-full h-72;
+}
+
+.default-container{
+  @apply mx-auto my-0 max-w-[1260px] h-full px-6 xl:px-0;
+
+  .default-container{
+    @apply m-0 p-0;
+  }
+}
+
+.default-loader {
+  @apply h-auto mx-auto flex justify-center align-middle;
+}
+
+.loader-dot {
+  @apply bg-primaryOrange rounded-full mx-3 opacity-75;
+  animation: pulse 1s infinite alternate;
+  transition-timing-function: ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.75);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+.loader-dot:nth-child(1) {
+  background: radial-gradient(circle at center, #ec6001 50%, transparent 52%);
+}
+
+.loader-dot:nth-child(2) {
+  background: radial-gradient(circle at center, #ec6001 50%, transparent 52%);
+  animation-delay: 0.1s;
+}
+
+.loader-dot:nth-child(3) {
+  background: radial-gradient(circle at center, #ec6001 50%, transparent 52%);
+  animation-delay: 0.3s;
+}
+
+.default-hover{
+  @apply cursor-pointer hover:opacity-20
+}
+
+.default-box-shadow {
+  -webkit-box-shadow: 10px 10px 23px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 23px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 23px 0px rgba(0,0,0,0.75);
+}
+
+.default-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-primaryOrange h-2; 
+}
+
+.default-scrollbar::-webkit-scrollbar {
+  @apply w-1 h-1;
+}
+
+.default-scrollbar::-webkit-scrollbar-track {
+  background-color: #f2f2f2;
+}
+
+.tooltip-container {
+  @apply relative cursor-pointer;
+}
+
+.tooltip {
+@apply hidden absolute mt-2 bg-secondaryGrey text-white p-1 rounded text-textSm z-10;
+}
+
+.tooltip-container:hover .tooltip {
+  @apply block;
+}
